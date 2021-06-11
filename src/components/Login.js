@@ -29,7 +29,7 @@ function Login({setUser}) {
           }}
           onSubmit={(values, { setSubmitting }) => {
             axios
-              .post("https://mini-back-12.herokuapp.com/api/user/login-admin", values)
+              .post("http://localhost:4000/api/user/login-admin", values)
               .then(({ data }) => {
 
                 localStorage.setItem("user",JSON.stringify(data))

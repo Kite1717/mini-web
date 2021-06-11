@@ -2,6 +2,8 @@ import React ,{useState}from 'react'
 import { Container } from 'react-bootstrap'
 
 import Navs from '../components/Navs'
+import AddBook from './AddBook'
+import AddExercises from './AddExercises'
 import CodeGen from './CodeGen'
 function Panel({setUser}) {
 
@@ -19,6 +21,18 @@ function Panel({setUser}) {
         {
             return(
                 <CodeGen/>
+            )
+        }
+        else if(route === 'add-book')
+        {
+            return(
+                <AddBook/>
+            )
+        }
+        else if(route === 'add-ex')
+        {
+            return(
+                <AddExercises/>
             )
         }
     }
