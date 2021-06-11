@@ -21,7 +21,7 @@ function CodeGen() {
   useEffect(() => {
     setloading(true);
     axios
-      .get("http://localhost:4000/api/book/all")
+      .get("https://mini-back-12.herokuapp.com/api/book/all")
       .then(({ data }) => {
         if (data.books.length > 0) {
           setBooks(data.books);
@@ -55,7 +55,7 @@ function CodeGen() {
   const sendCodes = () => {
     setloading(true);
     axios
-      .post("http://localhost:4000/api/code/add", {
+      .post("https://mini-back-12.herokuapp.com/api/code/add", {
         codes,
         bookId,
       })

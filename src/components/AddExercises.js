@@ -15,7 +15,7 @@ function AddExercises() {
   const getBooks = () => {
     setloading(true);
     axios
-      .get("http://localhost:4000/api/book/all")
+      .get("https://mini-back-12.herokuapp.com/api/book/all")
       .then(({ data }) => {
         if (data.books.length > 0) {
           setBooks(data.books);
@@ -31,6 +31,7 @@ function AddExercises() {
         setloading(false);
       });
   };
+
 
 
     return (
